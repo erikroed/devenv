@@ -1,0 +1,20 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: Update cache
+      apt:
+        update_cache: true
+      tags:
+        - docker
+        - brave
+        - ide
+        - neovim
+        - tmux
+        - xpanes
+  tasks:
+    - import_tasks: tasks/docker.yml
+    - import_tasks: tasks/brave.yml
+    - import_tasks: tasks/ide.yml
+    - import_tasks: tasks/neovim.yml
+    - import_tasks: tasks/tmux.yml
+    - import_tasks: tasks/xpanes.yml
