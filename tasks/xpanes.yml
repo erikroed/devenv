@@ -1,0 +1,12 @@
+- name: Add xpanes repository
+  apt_repository:
+    repo: ppa:greymd/tmux-xpanes
+  tags:
+    - xpanes
+
+- name: Install xpanes
+  apt:
+    name: tmux-xpanes
+    update_cache: yes
+  tags:
+    - xpanes
