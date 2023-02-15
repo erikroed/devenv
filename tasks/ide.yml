@@ -1,0 +1,21 @@
+- name: Create folder for installation files if it doesn't exist
+  file:
+    path: /opt/idea
+    state: directory
+    mode: '0755'
+  tags:
+    - ide
+
+- name: Download IntelliJ IDEA Community Edition tarball
+  get_url:
+    url: https://download.jetbrains.com/idea/ideaIC-2022.3.2.tar.gz?_ga=2.151419696.80785005.1676413469-1496090286.1676413469
+    dest: /opt/idea/idea.tar.gz
+  tags:
+    - ide
+
+- name: Extract tarfile
+  unarchive:
+    src: /opt/idea/idea.tar.gz
+    dest: /opt/idea
+  tags:
+    - ide
