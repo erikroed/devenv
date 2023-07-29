@@ -1,5 +1,7 @@
 # devenv
-Repo with demo playbook used during NC Global Tech Talk - Automating your development environment
+Repo with demo playbook used during NC Global Tech Talk - Automating your development environment.
+  * Link to the recording: https://www.youtube.com/watch?v=8yTcFVQzmJc
+  * Notes for the presentation: https://github.com/erikroed/devenv-notes  
 
 # WSL2 - Is the docker daemon running?
 
